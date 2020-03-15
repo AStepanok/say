@@ -14,20 +14,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS6-2q-VLG" customClass="CustomLabel" customModule="SAY" customModuleProvider="target">
-                    <rect key="frame" x="20" y="20" width="404" height="45"/>
+                    <rect key="frame" x="20" y="0.0" width="404" height="45"/>
                     <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWO-qq-e0c">
-                    <rect key="frame" x="40" y="72" width="33" height="16"/>
+                    <rect key="frame" x="40" y="52" width="33" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7p-wP-YO7">
-                    <rect key="frame" x="82" y="72" width="42" height="16"/>
+                    <rect key="frame" x="82" y="52" width="42" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.0039215686274509803" green="0.098039215686274508" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -35,13 +35,13 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aWO-qq-e0c" secondAttribute="bottom" id="5GH-aa-cIi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aWO-qq-e0c" secondAttribute="bottom" constant="20" id="5GH-aa-cIi"/>
                 <constraint firstItem="aWO-qq-e0c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="ApR-sU-eUk"/>
                 <constraint firstItem="aWO-qq-e0c" firstAttribute="top" secondItem="VS6-2q-VLG" secondAttribute="bottom" constant="7" id="Bx7-xR-osM"/>
                 <constraint firstItem="VS6-2q-VLG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Qfr-pS-xtR"/>
                 <constraint firstItem="R7p-wP-YO7" firstAttribute="leading" secondItem="aWO-qq-e0c" secondAttribute="trailing" constant="9" id="aS7-4I-HUX"/>
                 <constraint firstAttribute="trailing" secondItem="VS6-2q-VLG" secondAttribute="trailing" constant="20" id="hOP-mG-ynx"/>
-                <constraint firstItem="VS6-2q-VLG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="vN4-Wg-Uni"/>
+                <constraint firstItem="VS6-2q-VLG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vN4-Wg-Uni"/>
                 <constraint firstItem="R7p-wP-YO7" firstAttribute="top" secondItem="VS6-2q-VLG" secondAttribute="bottom" constant="7" id="xgg-XE-huE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
