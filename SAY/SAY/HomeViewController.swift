@@ -13,7 +13,7 @@ struct MessageItem {
     let date: String
 }
 
-class ViewController: UIViewController, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

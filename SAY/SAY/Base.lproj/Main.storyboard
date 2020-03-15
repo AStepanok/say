@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="ngg-9B-FnD">
             <objects>
-                <viewController title="Home" id="Zyv-7c-NUQ" customClass="ViewController" customModule="SAY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="Zyv-7c-NUQ" customClass="HomeViewController" customModule="SAY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Tv-k4-bQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,14 +99,48 @@
                     <view key="view" contentMode="scaleToFill" id="R4z-lp-YT5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What do you want to share?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VHm-hb-EIn">
+                                <rect key="frame" x="20" y="73" width="374" height="676"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CC-Qd-4ck">
+                                <rect key="frame" x="20" y="767" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPO-F7-HRu">
+                                <rect key="frame" x="26" y="59" width="85" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5CC-Qd-4ck" firstAttribute="top" secondItem="VHm-hb-EIn" secondAttribute="bottom" constant="18" id="8Xy-Iw-NSE"/>
+                            <constraint firstItem="VHm-hb-EIn" firstAttribute="top" secondItem="X1p-Cv-uyB" secondAttribute="top" constant="29" id="B3S-X2-xcC"/>
+                            <constraint firstItem="X1p-Cv-uyB" firstAttribute="trailing" secondItem="5CC-Qd-4ck" secondAttribute="trailing" constant="20" id="ChE-Th-sa8"/>
+                            <constraint firstItem="VHm-hb-EIn" firstAttribute="leading" secondItem="X1p-Cv-uyB" secondAttribute="leading" constant="20" id="Igm-7t-ImT"/>
+                            <constraint firstItem="5CC-Qd-4ck" firstAttribute="leading" secondItem="X1p-Cv-uyB" secondAttribute="leading" constant="20" id="KGg-21-1Sm"/>
+                            <constraint firstItem="cPO-F7-HRu" firstAttribute="leading" secondItem="X1p-Cv-uyB" secondAttribute="leading" constant="26" id="Sev-gT-Izl"/>
+                            <constraint firstItem="X1p-Cv-uyB" firstAttribute="trailing" secondItem="VHm-hb-EIn" secondAttribute="trailing" constant="20" id="dVt-Xj-Ovy"/>
+                            <constraint firstItem="cPO-F7-HRu" firstAttribute="top" secondItem="X1p-Cv-uyB" secondAttribute="top" constant="15" id="kxJ-h1-pZ4"/>
+                            <constraint firstItem="X1p-Cv-uyB" firstAttribute="bottom" secondItem="5CC-Qd-4ck" secondAttribute="bottom" constant="16" id="yNG-FB-Vfy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X1p-Cv-uyB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Message" image="pencil" catalog="system" id="y8o-Sh-R4V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdO-Ox-zeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200" y="361"/>
+            <point key="canvasLocation" x="-200.00000000000003" y="360.9375"/>
         </scene>
         <!--Your account-->
         <scene sceneID="w0t-KZ-nO9">
