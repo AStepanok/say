@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04997AF9242123F1004A656B /* WavesApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997AF8242123F1004A656B /* WavesApiService.swift */; };
+		04E4B78824217571000AB7EC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 04E4B78724217571000AB7EC /* Podfile */; };
 		04EBD2B12420D68B00383CEE /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */; };
 		6616E621241E802A000A6639 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616E61F241E802A000A6639 /* CustomTableViewCell.swift */; };
 		6616E622241E802A000A6639 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6616E620241E802A000A6639 /* CustomTableViewCell.xib */; };
@@ -17,10 +19,16 @@
 		661EFA9C241D17C300F9EFD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661EFA9A241D17C300F9EFD8 /* Main.storyboard */; };
 		661EFA9E241D17C400F9EFD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661EFA9D241D17C400F9EFD8 /* Assets.xcassets */; };
 		661EFAA1241D17C400F9EFD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661EFA9F241D17C400F9EFD8 /* LaunchScreen.storyboard */; };
+		F032100C7654871DFAE22CA6 /* Pods_SAY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD9761C179FBC2E774A3FB6 /* Pods_SAY.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04997AF8242123F1004A656B /* WavesApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesApiService.swift; sourceTree = "<group>"; };
+		04E4B78724217571000AB7EC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
+		2B8AA4D78EFC74F9FC424648 /* Pods-SAY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY.debug.xcconfig"; path = "Target Support Files/Pods-SAY/Pods-SAY.debug.xcconfig"; sourceTree = "<group>"; };
+		338A00EAB3E2D29F3D60A711 /* Pods-SAY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY.release.xcconfig"; path = "Target Support Files/Pods-SAY/Pods-SAY.release.xcconfig"; sourceTree = "<group>"; };
+		5DD9761C179FBC2E774A3FB6 /* Pods_SAY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6616E61F241E802A000A6639 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6616E620241E802A000A6639 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		6616E623241E86D6000A6639 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F032100C7654871DFAE22CA6 /* Pods_SAY.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +66,8 @@
 			children = (
 				661EFA93241D17C300F9EFD8 /* SAY */,
 				661EFA92241D17C300F9EFD8 /* Products */,
+				76279CA2FCD47D1643D723B3 /* Pods */,
+				90A82931DBCD41CC7052CD40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +84,7 @@
 			children = (
 				6616E625241E8A32000A6639 /* icons */,
 				661EFA94241D17C300F9EFD8 /* AppDelegate.swift */,
+				04997AF8242123F1004A656B /* WavesApiService.swift */,
 				661EFA96241D17C300F9EFD8 /* SceneDelegate.swift */,
 				661EFA9A241D17C300F9EFD8 /* Main.storyboard */,
 				04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */,
@@ -83,8 +95,27 @@
 				6616E620241E802A000A6639 /* CustomTableViewCell.xib */,
 				6616E623241E86D6000A6639 /* HomeViewController.swift */,
 				6616E628241E9284000A6639 /* NewMessageViewController.swift */,
+				04E4B78724217571000AB7EC /* Podfile */,
 			);
 			path = SAY;
+			sourceTree = "<group>";
+		};
+		76279CA2FCD47D1643D723B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B8AA4D78EFC74F9FC424648 /* Pods-SAY.debug.xcconfig */,
+				338A00EAB3E2D29F3D60A711 /* Pods-SAY.release.xcconfig */,
+			);
+			name = Pods;
+			path = SAY/Pods;
+			sourceTree = "<group>";
+		};
+		90A82931DBCD41CC7052CD40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DD9761C179FBC2E774A3FB6 /* Pods_SAY.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 661EFAA5241D17C400F9EFD8 /* Build configuration list for PBXNativeTarget "SAY" */;
 			buildPhases = (
+				A062E8FAFB160B46B5094656 /* [CP] Check Pods Manifest.lock */,
 				661EFA8D241D17C300F9EFD8 /* Sources */,
 				661EFA8E241D17C300F9EFD8 /* Frameworks */,
 				661EFA8F241D17C300F9EFD8 /* Resources */,
+				2100B5EDBC366B39A967806A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E4B78824217571000AB7EC /* Podfile in Resources */,
 				661EFAA1241D17C400F9EFD8 /* LaunchScreen.storyboard in Resources */,
 				661EFA9E241D17C400F9EFD8 /* Assets.xcassets in Resources */,
 				6616E622241E802A000A6639 /* CustomTableViewCell.xib in Resources */,
@@ -154,6 +188,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2100B5EDBC366B39A967806A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAY/Pods-SAY-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAY/Pods-SAY-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SAY/Pods-SAY-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A062E8FAFB160B46B5094656 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SAY-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		661EFA8D241D17C300F9EFD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -161,6 +237,7 @@
 			files = (
 				6616E624241E86D6000A6639 /* HomeViewController.swift in Sources */,
 				04EBD2B12420D68B00383CEE /* YourAccountViewController.swift in Sources */,
+				04997AF9242123F1004A656B /* WavesApiService.swift in Sources */,
 				661EFA95241D17C300F9EFD8 /* AppDelegate.swift in Sources */,
 				6616E629241E9284000A6639 /* NewMessageViewController.swift in Sources */,
 				6616E621241E802A000A6639 /* CustomTableViewCell.swift in Sources */,
@@ -306,6 +383,7 @@
 		};
 		661EFAA6241D17C400F9EFD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8AA4D78EFC74F9FC424648 /* Pods-SAY.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +401,7 @@
 		};
 		661EFAA7241D17C400F9EFD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338A00EAB3E2D29F3D60A711 /* Pods-SAY.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

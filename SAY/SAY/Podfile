@@ -1,0 +1,8 @@
+project '/Users/ilyagromov/Documents/Study/4 year/MOBPROG/say/SAY/SAY.xcodeproj'
+
+platform :ios, '10.0'
+use_frameworks!(true)
+ 
+target 'SAY' do
+  pod 'WavesSDK'
+end
