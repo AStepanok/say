@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04EBD2AF2420D29F00383CEE /* chuvak.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EBD2AE2420D29F00383CEE /* chuvak.png */; };
 		04EBD2B12420D68B00383CEE /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */; };
 		6616E621241E802A000A6639 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616E61F241E802A000A6639 /* CustomTableViewCell.swift */; };
 		6616E622241E802A000A6639 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6616E620241E802A000A6639 /* CustomTableViewCell.xib */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04EBD2AE2420D29F00383CEE /* chuvak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chuvak.png; path = ../../../../../../Desktop/chuvak.png; sourceTree = "<group>"; };
 		04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
 		6616E61F241E802A000A6639 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6616E620241E802A000A6639 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
@@ -47,18 +45,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04EBD2AD2420D27800383CEE /* images */ = {
-			isa = PBXGroup;
-			children = (
-				04EBD2AE2420D29F00383CEE /* chuvak.png */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		6616E625241E8A32000A6639 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				04EBD2AD2420D27800383CEE /* images */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -159,7 +148,6 @@
 				661EFAA1241D17C400F9EFD8 /* LaunchScreen.storyboard in Resources */,
 				661EFA9E241D17C400F9EFD8 /* Assets.xcassets in Resources */,
 				6616E622241E802A000A6639 /* CustomTableViewCell.xib in Resources */,
-				04EBD2AF2420D29F00383CEE /* chuvak.png in Resources */,
 				661EFA9C241D17C300F9EFD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
