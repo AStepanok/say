@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04EBD2AF2420D29F00383CEE /* chuvak.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EBD2AE2420D29F00383CEE /* chuvak.png */; };
+		04EBD2B12420D68B00383CEE /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */; };
 		6616E621241E802A000A6639 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616E61F241E802A000A6639 /* CustomTableViewCell.swift */; };
 		6616E622241E802A000A6639 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6616E620241E802A000A6639 /* CustomTableViewCell.xib */; };
 		6616E624241E86D6000A6639 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616E623241E86D6000A6639 /* HomeViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		04EBD2AE2420D29F00383CEE /* chuvak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chuvak.png; path = ../../../../../../Desktop/chuvak.png; sourceTree = "<group>"; };
+		04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
 		6616E61F241E802A000A6639 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6616E620241E802A000A6639 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		6616E623241E86D6000A6639 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				661EFA94241D17C300F9EFD8 /* AppDelegate.swift */,
 				661EFA96241D17C300F9EFD8 /* SceneDelegate.swift */,
 				661EFA9A241D17C300F9EFD8 /* Main.storyboard */,
+				04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */,
 				661EFA9D241D17C400F9EFD8 /* Assets.xcassets */,
 				661EFA9F241D17C400F9EFD8 /* LaunchScreen.storyboard */,
 				661EFAA2241D17C400F9EFD8 /* Info.plist */,
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6616E624241E86D6000A6639 /* HomeViewController.swift in Sources */,
+				04EBD2B12420D68B00383CEE /* YourAccountViewController.swift in Sources */,
 				661EFA95241D17C300F9EFD8 /* AppDelegate.swift in Sources */,
 				6616E629241E9284000A6639 /* NewMessageViewController.swift in Sources */,
 				6616E621241E802A000A6639 /* CustomTableViewCell.swift in Sources */,
