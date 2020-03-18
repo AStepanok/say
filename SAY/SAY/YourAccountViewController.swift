@@ -27,9 +27,8 @@ class YourAccountViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     private var data: [InfoBox] = [
-        InfoBox(name: "Public Key", value: "Threedogsateonebanana"),
-        InfoBox(name: "Hash", value: "wi374i7yrgwroi"),
-        InfoBox(name: "Something blockchain", value: "HEUEJVDKGEPLG"),
+        InfoBox(name: "Public Key", value: "GTS7nZ9cvQzcLonrhFJHdsb27b"),
+        InfoBox(name: "Seed", value: "Brown Fox Barely Barking Smoker"),
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
