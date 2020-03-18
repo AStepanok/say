@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		046524D92421890700585B56 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046524D82421890700585B56 /* Block.swift */; };
-		046524DC24219F4B00585B56 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046524DA24219F4B00585B56 /* Model.xcdatamodeld */; };
+		046524D92421890700585B56 /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046524D82421890700585B56 /* DataEntry.swift */; };
 		046524DE24219FE700585B56 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046524DD24219FE700585B56 /* CoreDataHelper.swift */; };
-		04997AF9242123F1004A656B /* WavesApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997AF8242123F1004A656B /* WavesApiService.swift */; };
+		046524E52421C28200585B56 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046524E32421C28200585B56 /* User+CoreDataClass.swift */; };
+		046524E62421C28200585B56 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046524E42421C28200585B56 /* User+CoreDataProperties.swift */; };
+		046524E72421C7C200585B56 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 046524DA24219F4B00585B56 /* Model.xcdatamodeld */; };
+		046524E92421C88C00585B56 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046524E82421C88C00585B56 /* UserRepository.swift */; };
+		04997AF9242123F1004A656B /* WavesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997AF8242123F1004A656B /* WavesService.swift */; };
 		04E4B78824217571000AB7EC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 04E4B78724217571000AB7EC /* Podfile */; };
 		04EBD2B12420D68B00383CEE /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */; };
 		6616E621241E802A000A6639 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616E61F241E802A000A6639 /* CustomTableViewCell.swift */; };
@@ -26,10 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		046524D82421890700585B56 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		046524D82421890700585B56 /* DataEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
 		046524DB24219F4B00585B56 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		046524DD24219FE700585B56 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		04997AF8242123F1004A656B /* WavesApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesApiService.swift; sourceTree = "<group>"; };
+		046524E32421C28200585B56 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		046524E42421C28200585B56 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		046524E82421C88C00585B56 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		04997AF8242123F1004A656B /* WavesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesService.swift; sourceTree = "<group>"; };
 		04E4B78724217571000AB7EC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
 		2B8AA4D78EFC74F9FC424648 /* Pods-SAY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY.debug.xcconfig"; path = "Target Support Files/Pods-SAY/Pods-SAY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,12 +95,14 @@
 		661EFA93241D17C300F9EFD8 /* SAY */ = {
 			isa = PBXGroup;
 			children = (
+				046524E32421C28200585B56 /* User+CoreDataClass.swift */,
+				046524E42421C28200585B56 /* User+CoreDataProperties.swift */,
 				6616E625241E8A32000A6639 /* icons */,
 				661EFA94241D17C300F9EFD8 /* AppDelegate.swift */,
-				04997AF8242123F1004A656B /* WavesApiService.swift */,
+				04997AF8242123F1004A656B /* WavesService.swift */,
 				661EFA96241D17C300F9EFD8 /* SceneDelegate.swift */,
 				661EFA9A241D17C300F9EFD8 /* Main.storyboard */,
-				046524D82421890700585B56 /* Block.swift */,
+				046524D82421890700585B56 /* DataEntry.swift */,
 				04EBD2B02420D68B00383CEE /* YourAccountViewController.swift */,
 				661EFA9D241D17C400F9EFD8 /* Assets.xcassets */,
 				661EFA9F241D17C400F9EFD8 /* LaunchScreen.storyboard */,
@@ -105,6 +113,7 @@
 				6616E628241E9284000A6639 /* NewMessageViewController.swift */,
 				04E4B78724217571000AB7EC /* Podfile */,
 				046524DD24219FE700585B56 /* CoreDataHelper.swift */,
+				046524E82421C88C00585B56 /* UserRepository.swift */,
 			);
 			path = SAY;
 			sourceTree = "<group>";
@@ -187,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046524E72421C7C200585B56 /* Model.xcdatamodeld in Resources */,
 				04E4B78824217571000AB7EC /* Podfile in Resources */,
 				661EFAA1241D17C400F9EFD8 /* LaunchScreen.storyboard in Resources */,
 				661EFA9E241D17C400F9EFD8 /* Assets.xcassets in Resources */,
@@ -246,12 +256,14 @@
 			files = (
 				046524DE24219FE700585B56 /* CoreDataHelper.swift in Sources */,
 				6616E624241E86D6000A6639 /* HomeViewController.swift in Sources */,
-				046524D92421890700585B56 /* Block.swift in Sources */,
+				046524E92421C88C00585B56 /* UserRepository.swift in Sources */,
+				046524E62421C28200585B56 /* User+CoreDataProperties.swift in Sources */,
+				046524D92421890700585B56 /* DataEntry.swift in Sources */,
 				04EBD2B12420D68B00383CEE /* YourAccountViewController.swift in Sources */,
-				04997AF9242123F1004A656B /* WavesApiService.swift in Sources */,
+				04997AF9242123F1004A656B /* WavesService.swift in Sources */,
 				661EFA95241D17C300F9EFD8 /* AppDelegate.swift in Sources */,
-				046524DC24219F4B00585B56 /* Model.xcdatamodeld in Sources */,
 				6616E629241E9284000A6639 /* NewMessageViewController.swift in Sources */,
+				046524E52421C28200585B56 /* User+CoreDataClass.swift in Sources */,
 				6616E621241E802A000A6639 /* CustomTableViewCell.swift in Sources */,
 				661EFA97241D17C300F9EFD8 /* SceneDelegate.swift in Sources */,
 			);
