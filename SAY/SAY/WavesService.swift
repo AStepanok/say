@@ -28,7 +28,26 @@ final class WavesService {
             print("Checkpoint 2")
             let dataEntries = try? self?.jsonDecoder.decode([DataEntry].self, from: data)
 //            let returnData = String(data: data, encoding: .utf8)
-            completion(dataEntries)
+            
+            // Calculate posts
+            let user = UserRepository.getUser() as! User
+            let userSeed = user.seed ?? ""
+            if userSeed.count == 0 { return }
+            
+            var validDataEntries = [DataEntry]()
+            var count: Int = 0
+            let pattern = "^" + (self?.getAddress(seed: userSeed) ?? "") + "_\\d+$"
+            print(pattern)
+            for dataEntry in dataEntries ?? [] {
+                if dataEntry.key.range(of: pattern, options: .regularExpression) != nil
+                {
+                    validDataEntries.append(dataEntry)
+                    count += 1
+                }
+            }
+            
+            UserRepository.setNumberOfMessages(num: count)
+            completion(validDataEntries)
         }
         task.resume()
     }
@@ -73,5 +92,9 @@ final class WavesService {
     
     func getPublicKey(seed: String) -> String {
         return WavesCrypto.shared.publicKey(seed: seed) ?? ""
+    }
+    
+    func getAddress(seed: String) -> String {
+        return WavesCrypto.shared.address(seed: seed, chainId:"T")!
     }
 }

@@ -9,9 +9,17 @@
 import Foundation
 import CoreData
 
+protocol NumOfMessagesDelegate: class {
+     // you can add parameters if you want to pass. something to controller
+    func NumOfMessagesUpdated(numOfMessages: Int)
+}
+
 final class UserRepository {
     static var coreDataHelper = CoreDataHelper()
     static var wavesService = WavesService()
+    public static weak var delegate: NumOfMessagesDelegate?
+    
+    public static var numberOfMessages: Int = 0
     
     public static func getUser() -> User? {
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
@@ -38,12 +46,13 @@ final class UserRepository {
         let newSeed = "student draft picnic pass security short cook usual below prefer fashion curious scissors over opera"
         guard let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataHelper.context) as? User else { return nil }
         newUser.seed = newSeed
-        newUser.name = "New User"
+        newUser.name = "Vladimir Zhur"
         coreDataHelper.saveContext()
         return newUser
     }
     
-//    public static func countMessagesByUser(seed: String) -> Int {
-//        
-//    }
+    public static func setNumberOfMessages(num: Int){
+        numberOfMessages = num
+        delegate?.NumOfMessagesUpdated(numOfMessages: num)
+    }
 }

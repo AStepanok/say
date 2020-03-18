@@ -28,7 +28,13 @@ class NewMessageViewController: UIViewController {
         let user = UserRepository.getUser() as! User
         let userSeed = user.seed ?? ""
         if userSeed.count == 0 { return }
-        wavesService.publishMessage(seed: userSeed, messageId: "5", text: text)
+        let mid = UserRepository.numberOfMessages + 1
+        wavesService.publishMessage(seed: userSeed, messageId: String(mid), text: text)
+        let alertController = UIAlertController(title: "Forever and ever", message:
+              "Your message is on its way to blockchain", preferredStyle: .alert)
+          alertController.addAction(UIAlertAction(title: "Thanks", style: .default))
+          self.present(alertController, animated: true, completion: nil)
+        textView.text = "Do you wish to do it one more time?"
     }
     
     /*

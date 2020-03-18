@@ -25,16 +25,25 @@ struct MessageItem {
 
 class HomeViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userNumOfMessages: UILabel!
     private var wavesService = WavesService()
     private var userId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMessages()
+//        loadMessages()
+        updateUser()
+        UserRepository.delegate = self
         
         tableView.dataSource = self
         let cellNib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "CustomTableViewCell")
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        loadMessages()
+        updateUser()
     }
     
     private var data: [MessageItem] = []
@@ -59,6 +68,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
                   var messageItems = [MessageItem]()
                   if messageList != nil {
                       let messageList = messageList as! [DataEntry]
+                      self?.data = [MessageItem]()
                       for msg in messageList{
                           let dateTextPair = msg.value.components(separatedBy: " // ")
                           let text = dateTextPair[1]
@@ -94,6 +104,15 @@ class HomeViewController: UIViewController, UITableViewDataSource {
          return cell //4.
     }
     
+    func updateUser() {
+        let user = UserRepository.getUser() as! User
+        let userSeed = user.seed ?? ""
+        if userSeed.count == 0 { return }
+        let userNameText = user.name ?? "Anonymous"
+        print(userSeed)
+        print(userNameText)
+        userName.text = userNameText
+    }
 
     /*
     // MARK: - Navigation
@@ -123,5 +142,13 @@ extension HomeViewController: MessageShareDelegate {
       
               // present the view controller
               self.present(activityViewController, animated: true, completion: nil)
+    }
+}
+
+extension HomeViewController: NumOfMessagesDelegate {
+    func NumOfMessagesUpdated(numOfMessages: Int) {
+        DispatchQueue.main.async {
+            self.userNumOfMessages.text = String(UserRepository.numberOfMessages) + " messages"
+        }
     }
 }

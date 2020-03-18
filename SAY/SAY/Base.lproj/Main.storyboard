@@ -33,8 +33,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-GF-eoK">
-                                <rect key="frame" x="91" y="95" width="73" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-GF-eoK">
+                                <rect key="frame" x="91" y="95" width="118" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -86,6 +86,8 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="pZQ-ki-cjb"/>
                     <connections>
                         <outlet property="tableView" destination="cgE-LI-awy" id="CAG-5u-SSO"/>
+                        <outlet property="userName" destination="0wI-KF-3BV" id="5ez-Z8-ExW"/>
+                        <outlet property="userNumOfMessages" destination="jOV-GF-eoK" id="65g-z5-WTg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJC-df-33K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,17 +103,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What do you want to share?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VHm-hb-EIn">
-                                <rect key="frame" x="20" y="73" width="374" height="676"/>
+                                <rect key="frame" x="20" y="73" width="374" height="653"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CC-Qd-4ck">
-                                <rect key="frame" x="20" y="767" width="374" height="30"/>
+                                <rect key="frame" x="20" y="743" width="374" height="54"/>
                                 <color key="backgroundColor" red="0.05435415733" green="0.1158247703" blue="0.96848052740000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="plb-Wg-iys"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Send">
+                                <state key="normal" title="Send (0$)">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -127,12 +132,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5CC-Qd-4ck" firstAttribute="top" secondItem="VHm-hb-EIn" secondAttribute="bottom" constant="18" id="8Xy-Iw-NSE"/>
                             <constraint firstItem="VHm-hb-EIn" firstAttribute="top" secondItem="X1p-Cv-uyB" secondAttribute="top" constant="29" id="B3S-X2-xcC"/>
                             <constraint firstItem="X1p-Cv-uyB" firstAttribute="trailing" secondItem="5CC-Qd-4ck" secondAttribute="trailing" constant="20" id="ChE-Th-sa8"/>
                             <constraint firstItem="VHm-hb-EIn" firstAttribute="leading" secondItem="X1p-Cv-uyB" secondAttribute="leading" constant="20" id="Igm-7t-ImT"/>
                             <constraint firstItem="5CC-Qd-4ck" firstAttribute="leading" secondItem="X1p-Cv-uyB" secondAttribute="leading" constant="20" id="KGg-21-1Sm"/>
                             <constraint firstItem="cPO-F7-HRu" firstAttribute="leading" secondItem="X1p-Cv-uyB" secondAttribute="leading" constant="26" id="Sev-gT-Izl"/>
+                            <constraint firstItem="5CC-Qd-4ck" firstAttribute="top" secondItem="VHm-hb-EIn" secondAttribute="bottom" constant="17" id="UNo-0R-Q9X"/>
                             <constraint firstItem="X1p-Cv-uyB" firstAttribute="trailing" secondItem="VHm-hb-EIn" secondAttribute="trailing" constant="20" id="dVt-Xj-Ovy"/>
                             <constraint firstItem="cPO-F7-HRu" firstAttribute="top" secondItem="X1p-Cv-uyB" secondAttribute="top" constant="15" id="kxJ-h1-pZ4"/>
                             <constraint firstItem="X1p-Cv-uyB" firstAttribute="bottom" secondItem="5CC-Qd-4ck" secondAttribute="bottom" constant="16" id="yNG-FB-Vfy"/>
@@ -163,8 +168,8 @@
                                     <constraint firstAttribute="width" constant="100" id="JjB-pR-6PB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuvak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1F-Sx-Vcz">
-                                <rect key="frame" x="171" y="167" width="72" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1F-Sx-Vcz">
+                                <rect key="frame" x="161.5" y="167" width="91" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,8 +186,8 @@
                                 <color key="textColor" red="0.0" green="0.18416908379999999" blue="0.97583550210000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shV-MX-UXt">
-                                <rect key="frame" x="214" y="278" width="40" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Delete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shV-MX-UXt">
+                                <rect key="frame" x="214" y="279" width="40" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.18416908379999999" blue="0.97583550210000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
