@@ -31,6 +31,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMessages()
+        
         tableView.dataSource = self
         let cellNib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "CustomTableViewCell")
@@ -80,15 +81,19 @@ class HomeViewController: UIViewController, UITableViewDataSource {
          let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! CustomTableViewCell
             
          let item = data[indexPath.row] //2.
-            
+        
+        cell.delegate = self
+        cell.messageItem = item
         cell.message.layer.cornerRadius = 12
         cell.message.layer.masksToBounds = true
         cell.message.text = item.label //3.
         cell.date.text = item.date
         
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
             
          return cell //4.
     }
+    
 
     /*
     // MARK: - Navigation
@@ -102,4 +107,21 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     
    
 
+}
+
+extension HomeViewController: MessageShareDelegate {
+    func shareButtonPressed(messageItem: MessageItem) {
+              let text = "https://rinta01.github.io/say-frontend/#" + (messageItem.id)
+      
+              // set up activity view controller
+              let textToShare = [ text ]
+              let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+              activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+      
+              // exclude some activity types from the list (optional)
+              activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+      
+              // present the view controller
+              self.present(activityViewController, animated: true, completion: nil)
+    }
 }

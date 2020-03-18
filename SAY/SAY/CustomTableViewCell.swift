@@ -28,14 +28,28 @@ import UIKit
     }
 }
 
+protocol MessageShareDelegate: class {
+     // you can add parameters if you want to pass. something to controller
+    func shareButtonPressed(messageItem: MessageItem)
+}
+
 class CustomTableViewCell: UITableViewCell {
     
-
+    public var messageItem: MessageItem?
+    
+    public weak var delegate: MessageShareDelegate?
+    
     @IBOutlet weak var message: CustomLabel!
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
+    
+    @IBAction func shareButtonPressed(_ sender: UIButton) {
+        delegate?.shareButtonPressed(messageItem: messageItem as! MessageItem)
+    }
+    
 }

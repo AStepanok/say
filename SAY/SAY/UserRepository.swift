@@ -42,4 +42,8 @@ final class UserRepository {
         coreDataHelper.saveContext()
         return newUser
     }
+    
+//    public static func countMessagesByUser(seed: String) -> Int {
+//        
+//    }
 }
