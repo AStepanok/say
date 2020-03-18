@@ -95,7 +95,7 @@
         <!--New message-->
         <scene sceneID="P8G-fX-PSr">
             <objects>
-                <viewController title="New message" id="4jr-He-ehO" sceneMemberID="viewController">
+                <viewController title="New message" id="4jr-He-ehO" customClass="NewMessageViewController" customModule="SAY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R4z-lp-YT5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,11 +109,14 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CC-Qd-4ck">
                                 <rect key="frame" x="20" y="767" width="374" height="30"/>
-                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.05435415733" green="0.1158247703" blue="0.96848052740000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Send">
-                                    <color key="titleColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="4jr-He-ehO" eventType="touchUpInside" id="QLo-Bg-2Ia"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPO-F7-HRu">
                                 <rect key="frame" x="26" y="59" width="85" height="16"/>
@@ -137,6 +140,9 @@
                         <viewLayoutGuide key="safeArea" id="X1p-Cv-uyB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Message" image="pencil" catalog="system" id="y8o-Sh-R4V"/>
+                    <connections>
+                        <outlet property="textView" destination="VHm-hb-EIn" id="hhp-yT-qfZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdO-Ox-zeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

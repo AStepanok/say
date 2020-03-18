@@ -10,13 +10,27 @@ import UIKit
 
 class NewMessageViewController: UIViewController {
 
+    private var wavesService = WavesService()
+    
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        let text = textView.text ?? ""
+        if text.count == 0 { return }
+        
+        // Always a User
+        let user = UserRepository.getUser() as! User
+        let userSeed = user.seed ?? ""
+        if userSeed.count == 0 { return }
+        wavesService.publishMessage(seed: userSeed, messageId: "5", text: text)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -30,26 +30,26 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//
+        loadMessages()
         tableView.dataSource = self
         let cellNib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "CustomTableViewCell")
     }
     
-    private var data: [MessageItem] = [
-        MessageItem(id: "1", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
-        MessageItem(id: "2", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
-        MessageItem(id: "3", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
-        MessageItem(id: "4", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
-        MessageItem(id: "5", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
-        MessageItem(id: "6", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
-    ]
+    private var data: [MessageItem] = []
+//        MessageItem(id: "1", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
+//        MessageItem(id: "2", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
+//        MessageItem(id: "3", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
+//        MessageItem(id: "4", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
+//        MessageItem(id: "5", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
+//        MessageItem(id: "6", label: "I'm a good programmer. I mean, it's the only thing I am good at. I mean, last year, I threw a Frisbee and it chipped my tooth.", date: "13 March 2019"),
+//    ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return data.count
     }
     
-    private func loadMessages() -> [MessageItem] {
+    private func loadMessages() -> Void {
         var messageList: [DataEntry]?
         wavesService.downloadMessages() { [weak self] dataEntries in
             messageList = dataEntries
@@ -61,18 +61,19 @@ class HomeViewController: UIViewController, UITableViewDataSource {
                       for msg in messageList{
                           let dateTextPair = msg.value.components(separatedBy: " // ")
                           let text = dateTextPair[1]
-                          let date = Date(timeIntervalSince1970: Double(dateTextPair[0]) as! TimeInterval)
+                        let date = Date(timeIntervalSince1970: Double(dateTextPair[0])!/1000.0 as! TimeInterval)
                           let dateFormatter = DateFormatter()
                           dateFormatter.dateFormat = "dd.MM.yyyy" //Specify your format that you want
                           let strDate = dateFormatter.string(from: date)
-                          
                           self?.data.append(MessageItem(id: msg.key, label: text, date: strDate))
                       }
                   }
             print("Checkpoint 5")
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
         print("Checkpoint 4")
-        return([MessageItem]())
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

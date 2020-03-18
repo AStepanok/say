@@ -71,4 +71,7 @@ final class WavesService {
         return newSeed
     }
     
+    func getPublicKey(seed: String) -> String {
+        return WavesCrypto.shared.publicKey(seed: seed) ?? ""
+    }
 }
